@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collage</title>
+  <style>
+    body {
+      background-color: #0f3057; /* Dark shade of blue */
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      position: relative; /* Ensure body is positioned relative for absolute positioning of stars */
+    }
+    #collage-container {
+      margin-top: 20px; /* Adjust top margin as needed */
+      position: relative;
+      display: inline-block;
+    }
+    #collage {
+      max-width: 100%; /* Ensure collage image fits within container */
+      display: block;
+      margin: 0 auto;
+    }
+    .silver-star-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0; /* Ensure background stars are behind everything */
+    }
+    .hurray-link {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+      position: absolute;
+      top: 10px; /* Adjust top position */
+      right: 10px; /* Adjust right position */
+    }
+  </style>
+</head>
+<body>
+  <!-- Background stars -->
+  <img class="silver-star-background" src="silverstars.png" alt="Silver Stars">
+  
+  <div id="collage-container">
+    <img id="collage" src="collage.png" alt="Collage Image">
+  </div>
+  
+  <!-- Link to silvester.html -->
+  <a href="silvester.html" class="hurray-link">HURRAY!!!</a>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            background-color: #f9f9f9;
+        }
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<form id="loginForm" action="mainpage.html" onsubmit="return validateForm()">
+    <h2>Login</h2>
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" placeholder="Enter your username" required><br>
+    <span style="font-size: 12px; color: #888;">Hint: A name you don't use as much as others do</span><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
+    <span style="font-size: 12px; color: #888;">Hint: A queen said, "I'd give up chocolate but I'm not a quitter"</span><br><br>
+
+    <input type="submit" value="Login">
+    <p id="errorText" class="error-message"></p>
+</form>
+
+<script>
+    function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username === "chioma" && password === "eslla") {
+            return true; // Allow form submission
+        } else {
+            var errorText = document.getElementById("errorText");
+            errorText.textContent = "Incorrect username or password. Please try again.";
+            return false; // Prevent form submission
+        }
+    }
+</script>
+
+</body>
+</html>
